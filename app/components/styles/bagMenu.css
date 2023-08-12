@@ -1,0 +1,21 @@
+.overlay-active {
+  right: 0%;
+  background-color: rgba(90, 90, 90, 0.57);
+}
+
+.overlay-closed {
+  right: -200%;
+  display: none;
+}
+
+.panel-active {
+  right: 0%;
+  top: 0%;
+  transition: all 300ms ease;
+}
+
+.panel-closed {
+  right: -200%;
+  top: 0%;
+  transition: all 300ms ease;
+}
