@@ -5,6 +5,12 @@ import "./styles/hamburgerMenu.css";
 import { GrClose } from "react-icons/gr";
 import React from "react";
 import Link from "next/link";
+import { Ysabeau_Infant } from "next/font/google";
+
+const ysabeau_infant = Ysabeau_Infant({
+  weight: ["300"],
+  subsets: ["latin"],
+});
 
 function HamburgerMenu() {
   const [menuIsActive, setMenuActive] = useState(false);
@@ -24,19 +30,37 @@ function HamburgerMenu() {
           }}
           size={30}
         />
-        <ul className="nav-items">
-          <li>Latest</li>
+        <ul className="lg:w-1/3 lg:flex hidden justify-between items-center">
           <Link
             href="/products/tees"
-            onClick={() => {
-              setMenuActive(!menuIsActive);
-            }}
+            className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
-            <li>Tees</li>
+            Latest
           </Link>
-          <li>Hoodies</li>
-          <li>Pants</li>
-          <li>Custom</li>
+          <Link
+            href="/products/tees"
+            className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
+          >
+            Tees
+          </Link>
+          <Link
+            href="/products/tees"
+            className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
+          >
+            Hoodies
+          </Link>
+          <Link
+            href="/products/tees"
+            className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
+          >
+            Pants
+          </Link>
+          <Link
+            href="/products/tees"
+            className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
+          >
+            Custom
+          </Link>
         </ul>
       </div>
     </>

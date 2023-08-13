@@ -1,11 +1,24 @@
 import Image from "next/image";
-import Head from "next/head"
-import type { Metadata } from 'next'
-import home_splash from "../public/images/home-splash2.png"
+import Link from "next/link";
+import type { Metadata } from "next";
+import home_splash from "../public/images/home-splash2.png";
+import { Source_Serif_4 } from "next/font/google";
+import { Ysabeau_Infant } from "next/font/google";
+
+const ysabeau_infant = Ysabeau_Infant({
+  weight: ["300"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  description: '...',
-}
+  description:
+    "WaveCo Streetwear is an independent streetwear company created in 2023. Shop streetwear tees, hoodies, pants, and even design custom  clothing",
+};
+
+const source_serif = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export default function Home() {
   /*
@@ -34,16 +47,35 @@ export default function Home() {
     <div>
       <main>
         <div className="flex lg:flex-row flex-col w-screen h-screen">
-          <div className="lg:w-1/2 lg:p-32 w-screen">
-            <Image className="lg:w-full h-auto" src={home_splash} alt="WaveCO homepage image" sizes="100vw"/>
+          <div className="lg:w-1/2 lg:p-9 w-screen">
+            <Image
+              className="lg:w-full h-auto"
+              src={home_splash}
+              alt="WaveCO homepage image"
+              sizes="100vw"
+            />
           </div>
-          <div className="lg:w-1/2 w-screen flex items-center text-center flex-col">
-            <h2>Shop The Latest Streetwear</h2>
-            <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quos deserunt beatae dolor eligendi provident, earum incidunt praesentium. Omnis temporibus fugit esse natus quas ex sed illo, nisi incidunt error.</p>
+          <div className="lg:w-1/2 w-screen h-screen flex lg:p-16 p-5 lg:items-start lg:gap-8 items-center lg:text-left text-center flex-col lg:justify-center">
+            <h1
+              className={`${source_serif.className} lg:text-6xl text-5xl lg:m-0 my-3`}
+            >
+              Shop The Latest Streetwear
+            </h1>
+            <p className={`${ysabeau_infant.className}`}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quos
+              deserunt beatae dolor eligendi provident, earum incidunt
+              praesentium. Omnis temporibus fugit esse natus quas ex sed illo,
+              nisi incidunt error.
+            </p>
+            <Link
+              href="/"
+              className="w-40 h-10 lg:hover:text-white lg:text-slate-900 text-white lg:border-2 mt-9 transition-all duration-75 ease-linear lg:border-slate-900 items-center flex justify-center rounded-full bg-slate-900 lg:bg-white hover:lg:bg-slate-900"
+            >
+              Shop Latest
+            </Link>
           </div>
         </div>
       </main>
     </div>
-    
   );
 }
