@@ -3,13 +3,14 @@ import React, { useState } from "react";
 import { BsSearch, BsBagDash } from "react-icons/bs";
 import "./styles/bagMenu.css";
 import { GrClose } from "react-icons/gr";
+import { Fragment } from "react";
 
 function BagMenu() {
   const [bagMenuActive, setMenuActive] = useState(false);
   return (
     <>
       <BsBagDash size={25} onClick={() => setMenuActive(!bagMenuActive)} />
-      <>
+      <Fragment>
         <div
           onClick={() => setMenuActive(!bagMenuActive)}
           className={`lg:w-screen lg:h-screen absolute top-0 lg:block hidden ${
@@ -23,7 +24,7 @@ function BagMenu() {
         >
           <GrClose onClick={() => setMenuActive(!bagMenuActive)} size={30} />
         </div>
-      </>
+      </Fragment>
     </>
   );
 }

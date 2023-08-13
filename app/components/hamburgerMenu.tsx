@@ -6,6 +6,7 @@ import { GrClose } from "react-icons/gr";
 import React from "react";
 import Link from "next/link";
 import { Ysabeau_Infant } from "next/font/google";
+import { Fragment } from "react";
 
 const ysabeau_infant = Ysabeau_Infant({
   weight: ["300"],
@@ -15,7 +16,7 @@ const ysabeau_infant = Ysabeau_Infant({
 function HamburgerMenu() {
   const [menuIsActive, setMenuActive] = useState(false);
   return (
-    <>
+    <Fragment>
       <AiOutlineMenu
         className="lg:hidden"
         size={27}
@@ -63,7 +64,7 @@ function HamburgerMenu() {
           </Link>
         </ul>
       </div>
-    </>
+    </Fragment>
   );
 }
 
