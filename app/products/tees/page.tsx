@@ -4,9 +4,10 @@ import type { Metadata } from "next";
 
 function Tees() {
   const [productsData, setFetchedData] = useState([]);
+  const BASE_URL = process.env.BASE_URL;
 
   const fetchedData = async () => {
-    const res = fetch("http://localhost:3000/api/products/tees", {
+    const res = fetch(`${BASE_URL}/api/products/tees`, {
       method: "GET",
     })
       .then((response) => {
