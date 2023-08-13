@@ -8,6 +8,7 @@ import { Ysabeau_Infant } from "next/font/google";
 const ysabeau_infant = Ysabeau_Infant({
   weight: ["300"],
   subsets: ["latin"],
+  display: "swap",
 });
 
 function Navbar() {

@@ -11,6 +11,7 @@ import { Fragment } from "react";
 const ysabeau_infant = Ysabeau_Infant({
   weight: ["300"],
   subsets: ["latin"],
+  display: "swap",
 });
 
 function HamburgerMenu() {
