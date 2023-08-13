@@ -10,6 +10,7 @@ function Navbar() {
       <div className="flex w-1/2 lg:w-1/3 justify-center items-center">
         <Link href="/">
           <Image
+          className="h-auto w-auto"
             src="/waveco_logo.png"
             alt="waveco logo"
             width={140}
