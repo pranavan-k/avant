@@ -6,21 +6,21 @@ function TeesDisplay() {
     const [productsData, setFetchedData] = useState([]);
 
     const fetchedData = async () => {
-      const res = fetch(`/api/products/tees`, {
+        const res = fetch(`/api/products/tees`, {
         method: "GET",
-      })
+        })
         .then((response) => {
-          return response.json();
+            return response.json();
         })
         .then((data) => {
-          setFetchedData(data);
+            setFetchedData(data);
         });
     };
   
     useEffect(() => {
-      fetchedData();
+        fetchedData();
     }, []);
-  
+
     return (
       <main className="w-screen flex justify-around lg:flex-row flex-col">
         {productsData.map((product: any, key) => {

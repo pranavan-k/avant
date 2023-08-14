@@ -21,7 +21,9 @@ function Product({id, name, price, imageId, qty, children} : any) {
             width="550"
             alt="product image"
             height="550"
-            src={imageId}/>
+            src={imageId} 
+            placeholder="blur"
+            blurDataURL={imageId}/>
         </div>
         <div className='ml-5 flex flex-col gap-1'>
             <h1 className={`${source_serif.className}`}>{name}</h1>

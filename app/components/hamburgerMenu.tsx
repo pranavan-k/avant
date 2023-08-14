@@ -38,30 +38,29 @@ function HamburgerMenu() {
           >
             Latest
           </Link>
-          <Link
-            href="/products/tees"
+          <a href="/products/tees"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
             Tees
-          </Link>
-          <Link
+          </a>
+          <a
             href="/products/tees"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
             Hoodies
-          </Link>
-          <Link
+          </a>
+          <a
             href="/products/tees"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
             Pants
-          </Link>
-          <Link
+          </a>
+          <a
             href="/products/tees"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
             Custom
-          </Link>
+          </a>
         </ul>
       </div>
     </Fragment>
