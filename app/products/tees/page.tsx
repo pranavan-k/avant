@@ -4,16 +4,15 @@ import type { Metadata } from "next";
 
 function Tees() {
   const [productsData, setFetchedData] = useState([]);
-  const BASE_URL = process.env.BASE_URL;
 
   const fetchedData = async () => {
-    const res = fetch(`${BASE_URL}/api/products/tees`, {
+    const res = fetch(`/api/products/tees`, {
       method: "GET",
     })
       .then((response) => {
         return response.json();
       })
-      .then((data: any) => {
+      .then((data) => {
         setFetchedData(data);
       });
   };
@@ -25,7 +24,7 @@ function Tees() {
   return (
     <div>
       {productsData.map((product: any, key) => {
-        return <div key={key}>{product._id}</div>;
+        return (<div key={key}>{product._id}</div>);
       })}
     </div>
   );

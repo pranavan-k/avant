@@ -14,7 +14,6 @@ export async function GET(request: Request) {
       .toArray();
 
     return NextResponse.json(products);
-    return NextResponse.json(products);
   } catch (e) {
     console.error(e);
   }

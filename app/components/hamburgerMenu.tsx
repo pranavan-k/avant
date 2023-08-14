@@ -5,13 +5,12 @@ import "./styles/hamburgerMenu.css";
 import { GrClose } from "react-icons/gr";
 import React from "react";
 import Link from "next/link";
-import { Ysabeau_Infant } from "next/font/google";
+import { Tajawal } from "next/font/google";
 import { Fragment } from "react";
 
-const ysabeau_infant = Ysabeau_Infant({
+const ysabeau_infant = Tajawal({
   weight: ["300"],
   subsets: ["latin"],
-  display: "swap",
 });
 
 function HamburgerMenu() {
