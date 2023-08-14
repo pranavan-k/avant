@@ -3,10 +3,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import home_splash from "../public/images/home-splash2.png";
 import { Source_Serif_4 } from "next/font/google";
-import { Ysabeau_Infant } from "next/font/google";
+import { Tajawal } from "next/font/google";
 
-const ysabeau_infant = Ysabeau_Infant({
-  weight: ["300"],
+const ysabeau_infant = Tajawal({
+  weight: ["500"],
   subsets: ["latin"],
 });
 
@@ -61,7 +61,7 @@ export default function Home() {
             >
               Shop The Latest Streetwear
             </h1>
-            <p className={`${ysabeau_infant.className}`}>
+            <p className={`${ysabeau_infant.className} text-lg`}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quos
               deserunt beatae dolor eligendi provident, earum incidunt
               praesentium. Omnis temporibus fugit esse natus quas ex sed illo,

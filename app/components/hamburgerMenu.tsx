@@ -9,7 +9,7 @@ import { Tajawal } from "next/font/google";
 import { Fragment } from "react";
 
 const ysabeau_infant = Tajawal({
-  weight: ["300"],
+  weight: ["400"],
   subsets: ["latin"],
 });
 
@@ -31,7 +31,7 @@ function HamburgerMenu() {
           }}
           size={30}
         />
-        <ul className="lg:w-1/3 lg:flex hidden justify-between items-center">
+        <ul className="lg:hidden flex-col flex items-center gap-6 mt-5">
           <Link
             href="/products/tees"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
