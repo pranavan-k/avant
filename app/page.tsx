@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import home_splash from "../public/images/home-splash2.png";
+import home_splash from "../public/images/cropped-home-splash.png";
 import { Source_Serif_4 } from "next/font/google";
 import { Tajawal } from "next/font/google";
 
@@ -12,7 +12,7 @@ const ysabeau_infant = Tajawal({
 
 export const metadata: Metadata = {
   description:
-    "WaveCo Streetwear is an independent streetwear company created in 2023. Shop streetwear tees, hoodies, pants, and even design custom  clothing",
+    "WaveCo Streetwear is an independent streetwear company created in 2023. Shop streetwear tees, hoodies, pants, and even design custom clothing",
 };
 
 const source_serif = Source_Serif_4({
@@ -21,32 +21,10 @@ const source_serif = Source_Serif_4({
 });
 
 export default function Home() {
-  /*
-  const [productsData, setFetchedData] = useState([])
-
-  const fetchedData = async (data:any) => {
-    const res = fetch("http://localhost:3000/api/products/tees", {method: "GET"})
-    .then(response => 
-      {return response.json()}
-      )
-    .then((data:any) => {
-      setFetchedData(data.data)
-    })
-  }
-
-  console.log(productsData)
-  ----------------------------------------------------------------
-  <button onClick={fetchedData}>Click me</button>
-      <div>
-        {productsData.map((item:any, key) => {
-          return <h1 key={key}>{item.name}</h1>
-        })}
-      </div>
-  */
   return (
     <div>
       <main>
-        <div className="flex lg:flex-row flex-col w-screen h-screen">
+        <div className="flex lg:flex-row flex-col w-screen z-50">
           <div className="lg:w-1/2 lg:p-9 w-screen">
             <Image
               className="lg:w-full h-auto"
@@ -61,11 +39,8 @@ export default function Home() {
             >
               Shop The Latest Streetwear
             </h1>
-            <p className={`${ysabeau_infant.className} text-lg`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quos
-              deserunt beatae dolor eligendi provident, earum incidunt
-              praesentium. Omnis temporibus fugit esse natus quas ex sed illo,
-              nisi incidunt error.
+            <p className={`${ysabeau_infant.className} text-lg lg:pr-28`}>
+              Shop from our latest collection: The Summer Collection. We've got oversized streetwear, graphic tees, hoodies, and pants. Wear clothing from our of vareity signature designs that are perfect for the summer weather
             </p>
             <Link
               href="/"
@@ -74,6 +49,11 @@ export default function Home() {
               Shop Latest
             </Link>
           </div>
+        </div>
+        <div className="flex lg:flex-row flex-col w-screen skew-y-[-3deg] bg-zinc-800 py-44">
+          <div className="flex lg:flex-row flex-col w-screen skew-y-[3deg] z-[-1]">
+            
+            </div>
         </div>
       </main>
     </div>

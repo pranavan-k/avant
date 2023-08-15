@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import TeesDisplay from "@/app/components/teesDisplay";
 
 export const metadata : Metadata = {
-  title: "Tees"
+  title: "Shop Tees - Streetwear and graphic tees"
 }
 
 function Tees() {

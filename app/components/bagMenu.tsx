@@ -9,7 +9,10 @@ function BagMenu() {
   const [bagMenuActive, setMenuActive] = useState(false);
   return (
     <>
-      <BsBagDash size={25} onClick={() => setMenuActive(!bagMenuActive)} />
+      <div className="flex gap-2 items-center font-light cursor-pointer" onClick={() => setMenuActive(!bagMenuActive)}>
+        <BsBagDash size={25}></BsBagDash>
+        <h3 className="hidden lg:block">Cart</h3>
+      </div>
       <Fragment>
         <div
           onClick={() => setMenuActive(!bagMenuActive)}
@@ -22,7 +25,7 @@ function BagMenu() {
             bagMenuActive ? "panel-active" : "panel-closed"
           }`}
         >
-          <GrClose onClick={() => setMenuActive(!bagMenuActive)} size={30} />
+          <GrClose className="cursor-pointer" onClick={() => setMenuActive(!bagMenuActive)} size={30} />
         </div>
       </Fragment>
     </>

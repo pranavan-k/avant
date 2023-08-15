@@ -22,7 +22,7 @@ function TeesDisplay() {
     }, []);
 
     return (
-      <main className="w-screen flex justify-around lg:flex-row flex-col">
+      <main className="w-screen flex justify-between lg:flex-row flex-col">
         {productsData.map((product: any, key) => {
           return (<Product key={key} id={product._id} name={product.name} imageId={product.imageId} price={product.price} qty={product.qty}/>);
         })}
