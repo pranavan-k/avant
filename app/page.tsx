@@ -40,7 +40,7 @@ export default function Home() {
               Shop The Latest Streetwear
             </h1>
             <p className={`${ysabeau_infant.className} text-lg lg:pr-28`}>
-              Shop from our latest collection: The Summer Collection. We've got oversized streetwear, graphic tees, hoodies, and pants. Wear clothing from our of vareity signature designs that are perfect for the summer weather
+              Shop from our latest collection: The Summer Collection. We&apos;ve got oversized streetwear, graphic tees, hoodies, and pants. Wear clothing from our of vareity signature designs that are perfect for the summer weather
             </p>
             <Link
               href="/"
