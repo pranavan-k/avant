@@ -50,7 +50,7 @@ function Navbar() {
         nav_bar?.classList.remove("bg-white");
         nav_bar?.classList.remove("text-black");
         nav_bar?.classList.add("text-white");
-        nav_bar?.classList.add("lg:bg-transparent");
+        nav_bar?.classList.add("bg-transparent");
       }
 
       scrollPos = window.scrollY;
@@ -58,9 +58,9 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="w-screen flex justify-center">
-      <nav className="avant-navbar w-screen lg:h-20 flex bg-white items-center lg:text-white lg:hover:text-black lg:hover:bg-white fixed z-50 lg:py-6 py-4 transition-all duration-150 ease-in-out lg:bg-transparent">
-        <div className="flex w-1/2 lg:w-1/3 justify-center items-center">
+    <div className="w-screen flex justify-center transition-all duration-300 ease-in-out">
+      <nav className="avant-navbar w-screen lg:h-20 flex items-center text-white lg:hover:text-black lg:hover:bg-white fixed z-50 lg:py-6 py-4 transition-all duration-300 ease-in-out bg-transparent">
+        <div className="flex w-1/2 lg:w-1/3 justify-start items-center ml-10">
           <Link href="/">
             <h1 className={`${prata.className} text-3xl`}>AVANT</h1>
           </Link>
