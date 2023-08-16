@@ -36,30 +36,30 @@ function HamburgerMenu() {
             href="/products/tees"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
-            Latest
+            Featured
           </Link>
           <a href="/products/tees"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
-            Tees
+            Mens
           </a>
           <a
             href="/products/tees"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
-            Hoodies
+            Womens
           </a>
           <a
             href="/products/tees"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
-            Pants
+            Gifts
           </a>
           <a
             href="/products/tees"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
-            Custom
+            Accesories
           </a>
         </ul>
       </div>

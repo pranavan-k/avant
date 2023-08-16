@@ -13,11 +13,11 @@ const ysabeau_infant = Tajawal({
 
 function Navbar() {
   return (
-    <nav className="w-screen flex items-center bg-white fixed top-0 z-50">
+    <nav className="w-screen flex items-center bg-white fixed top-0 z-50 lg:py-6 py-4">
       <div className="flex w-1/2 lg:w-1/3 justify-center items-center">
         <Link href="/">
           <Image
-            className="w-24"
+            className="lg:w-32 w-24"
             src={Logo}
             alt="waveco logo"
             sizes="100%"
@@ -29,31 +29,31 @@ function Navbar() {
           href="/products/tees"
           className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
         >
-          Latest
+          Featured
         </Link>
         <Link
           href="/products/tees"
           className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
         >
-          Tees
+          Mens
         </Link>
         <Link
           href="/products/tees"
           className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
         >
-          Hoodies
+          Womens
         </Link>
         <Link
           href="/products/tees"
           className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
         >
-          Pants
+          Gifts
         </Link>
         <Link
           href="/products/tees"
           className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
         >
-          Custom
+          Accesories
         </Link>
       </ul>
       <div className="lg:w-1/3 w-1/2 flex lg:justify-center items-center gap-3 lg:gap-5 justify-end mr-7">

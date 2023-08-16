@@ -6,7 +6,7 @@ import Navbar from "./components/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "WaveCo - Streetwear and graphic tees",
+  title: "Avant - Official Site",
   description: "WaveCo Streetwear is an independent streetwear company created in 2023. Shop streetwear tees, hoodies, pants, and even design custom clothing",
   icons: {
     icon: "/icon.ico",
