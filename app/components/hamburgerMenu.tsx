@@ -24,21 +24,24 @@ function HamburgerMenu() {
           setMenuActive(!menuIsActive);
         }}
       />
-      <div className={`menu ${menuIsActive ? "menu-active" : "menu-closed"}`}>
+      <div
+        className={`menu ${menuIsActive ? "menu-active" : "menu-closed"} fixed`}
+      >
         <GrClose
           onClick={() => {
             setMenuActive(!menuIsActive);
           }}
           size={30}
         />
-        <ul className="lg:hidden flex-col flex items-center gap-6 mt-5">
+        <ul className="lg:hidden flex-col flex items-center gap-6 mt-5 text-black">
           <Link
             href="/products/tees"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
             Featured
           </Link>
-          <a href="/products/tees"
+          <a
+            href="/products/tees"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
             Mens
