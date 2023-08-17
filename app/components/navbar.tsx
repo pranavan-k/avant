@@ -11,7 +11,7 @@ import { useEffect } from "react";
 import { Prata } from "next/font/google";
 
 const ysabeau_infant = Tajawal({
-  weight: ["400"],
+  weight: ["300"],
   subsets: ["latin"],
 });
 
@@ -29,38 +29,44 @@ const prata = Prata({
           />
 */
 
-function Navbar() {
+function Navbar({ isHome }: any) {
   useEffect(() => {
     const nav_bar = document.querySelector(".avant-navbar");
     console.log(nav_bar);
     let scrollPos = window.scrollY;
 
     window.addEventListener("scroll", () => {
-      if (scrollPos < window.scrollY && scrollPos > 0) {
-        nav_bar?.classList.add("collapse");
+      if (isHome) {
+        if (scrollPos < window.scrollY && scrollPos > 0) {
+          nav_bar?.classList.add("collapse");
+        } else {
+          nav_bar?.classList.remove("collapse");
+        }
+        if (scrollPos > window.scrollY && scrollPos > 200) {
+          nav_bar?.classList.add("bg-white");
+          nav_bar?.classList.add("text-black");
+          nav_bar?.classList.remove("text-white");
+          nav_bar?.classList.remove("bg-transparent");
+        } else {
+          nav_bar?.classList.remove("bg-white");
+          nav_bar?.classList.remove("text-black");
+          nav_bar?.classList.add("text-white");
+          nav_bar?.classList.add("bg-transparent");
+        }
+
+        scrollPos = window.scrollY;
       } else {
-        nav_bar?.classList.remove("collapse");
-      }
-      if (scrollPos > window.scrollY && scrollPos > 200) {
         nav_bar?.classList.add("bg-white");
         nav_bar?.classList.add("text-black");
         nav_bar?.classList.remove("text-white");
-        nav_bar?.classList.remove("bg-transparent");
-      } else {
-        nav_bar?.classList.remove("bg-white");
-        nav_bar?.classList.remove("text-black");
-        nav_bar?.classList.add("text-white");
-        nav_bar?.classList.add("bg-transparent");
       }
-
-      scrollPos = window.scrollY;
     });
   }, []);
 
   return (
     <div className="w-screen flex justify-center transition-all duration-300 ease-in-out">
       <nav className="avant-navbar w-screen lg:h-20 flex items-center text-white lg:hover:text-black lg:hover:bg-white fixed z-50 lg:py-6 py-4 transition-all duration-300 ease-in-out bg-transparent">
-        <div className="flex w-1/2 lg:w-1/3 justify-start items-center ml-10">
+        <div className="flex w-1/2 lg:w-1/3 justify-start items-center lg:ml-10 ml-3">
           <Link href="/">
             <h1 className={`${prata.className} text-3xl`}>AVANT</h1>
           </Link>
@@ -73,7 +79,7 @@ function Navbar() {
             Featured
           </Link>
           <Link
-            href="/products/tees"
+            href="/products/mens"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
             Mens
@@ -97,7 +103,7 @@ function Navbar() {
             Accesories
           </Link>
         </ul>
-        <div className="lg:w-1/3 w-1/2 justify-end z-50 flex items-center gap-3 lg:gap-5 mr-10">
+        <div className="lg:w-1/3 w-1/2 justify-end z-50 flex items-center gap-3 lg:gap-5 lg:mr-10 mr-3">
           <BsSearch size={25} />
           <HamburgerMenu />
           <BagMenu />

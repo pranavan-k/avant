@@ -9,7 +9,7 @@ import { Tajawal } from "next/font/google";
 import { Fragment } from "react";
 
 const ysabeau_infant = Tajawal({
-  weight: ["400"],
+  weight: ["200"],
   subsets: ["latin"],
 });
 
@@ -41,7 +41,7 @@ function HamburgerMenu() {
             Featured
           </Link>
           <a
-            href="/products/tees"
+            href="/products/mens"
             className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
           >
             Mens

@@ -6,6 +6,7 @@ import home_splash_mobile from "@/public/images/home-page-mobile.png";
 import { Source_Serif_4 } from "next/font/google";
 import { Tajawal } from "next/font/google";
 import AvantColgne from "@/public/images/avant-cologne.png";
+import Navbar from "./components/navbar";
 
 const ysabeau_infant = Tajawal({
   weight: ["500"],
@@ -26,16 +27,17 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <main>
+        <Navbar isHome={true}></Navbar>
         <div className="flex lg:flex-row justify-center flex-col w-full z-50">
           <div className="w-screen justify-center flex items-center">
             <Image
-              className="w-full hidden lg:block brightness-[.80]"
+              className="w-full hidden lg:block"
               src={home_splash}
               alt="WaveCO homepage image"
               sizes="100vw"
             />
             <Image
-              className="w-full lg:hidden block brightness-[.80]"
+              className="w-full lg:hidden block"
               src={home_splash_mobile}
               alt="WaveCO homepage image"
               sizes="100vw"
@@ -50,7 +52,7 @@ export default function Home() {
 
             <Link
               href="/"
-              className="w-40 h-10 lg:text-white lg:border-white border-slate-900 border-2 mt-3 transition-all duration-75 ease-linear items-center flex justify-center rounded-full lg:hover:bg-white lg:hover:text-slate-900 text-slate-900"
+              className="w-40 h-10 lg:text-white lg:border-white border-slate-900 border-2 mt-3 transition-all duration-75 ease-linear items-center flex justify-center lg:hover:bg-white lg:hover:text-slate-900 text-slate-900"
             >
               Shop Featured
             </Link>
