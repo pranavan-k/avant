@@ -9,7 +9,7 @@ import { Tajawal } from "next/font/google";
 import { Fragment } from "react";
 
 const ysabeau_infant = Tajawal({
-  weight: ["200"],
+  weight: ["400"],
   subsets: ["latin"],
 });
 

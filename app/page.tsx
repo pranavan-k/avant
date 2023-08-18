@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import home_splash from "@/public/images/avant-home-splash2.png";
 import home_splash_mobile from "@/public/images/home-page-mobile.png";
-import { Source_Serif_4 } from "next/font/google";
+import { Prata } from "next/font/google";
 import { Tajawal } from "next/font/google";
 import AvantColgne from "@/public/images/avant-cologne.png";
 import Navbar from "./components/navbar";
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "WaveCo Streetwear is an independent streetwear company created in 2023. Shop streetwear tees, hoodies, pants, and even design custom clothing",
 };
 
-const source_serif = Source_Serif_4({
+const source_serif = Prata({
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -31,7 +31,7 @@ export default function Home() {
         <div className="flex lg:flex-row justify-center flex-col w-full z-50">
           <div className="w-screen justify-center flex items-center">
             <Image
-              className="w-full hidden lg:block"
+              className="w-full hidden lg:block brightness-90"
               src={home_splash}
               alt="WaveCO homepage image"
               sizes="100vw"

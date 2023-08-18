@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Product from "./product";
 
-function TeesDisplay() {
+function MensDisplay() {
   const [productsData, setFetchedData] = useState([]);
 
   const fetchedData = async () => {
@@ -39,4 +39,4 @@ function TeesDisplay() {
   );
 }
 
-export default TeesDisplay;
+export default MensDisplay;

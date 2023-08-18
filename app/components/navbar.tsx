@@ -32,7 +32,6 @@ const prata = Prata({
 function Navbar({ isHome }: any) {
   useEffect(() => {
     const nav_bar = document.querySelector(".avant-navbar");
-    console.log(nav_bar);
     let scrollPos = window.scrollY;
 
     window.addEventListener("scroll", () => {

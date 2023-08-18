@@ -16,14 +16,15 @@ const ysabeau_infant = Tajawal({
 function Product({id, name, price, imageId, qty, children} : any) {
   return (
     <div>
-        <div className='flex justify-center'>
+        <div className='flex justify-center p-2'>
             <CldImage
             width="550"
             alt="product image"
             height="550"
             src={imageId} 
             placeholder="blur"
-            blurDataURL={imageId}/>
+            blurDataURL={imageId}
+            className='w-full h-auto'/>
         </div>
         <div className='ml-5 flex flex-col gap-1'>
             <h1 className={`${source_serif.className}`}>{name}</h1>
