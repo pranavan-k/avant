@@ -22,19 +22,21 @@ function MensDisplay() {
   }, []);
 
   return (
-    <main className="w-full flex justify-between lg:flex-row flex-col">
-      {productsData.map((product: any, key) => {
-        return (
-          <Product
-            key={key}
-            id={product._id}
-            name={product.name}
-            imageId={product.imageId}
-            price={product.price}
-            qty={product.qty}
-          />
-        );
-      })}
+    <main>
+      <div className="grid grid-flow-row lg:grid-cols-3 grid-cols-1 grid-rows-auto">
+        {productsData.map((product: any) => {
+          return (
+            <Product
+              key={product.id}
+              id={product._id}
+              name={product.name}
+              imageId={product.imageId}
+              price={product.price}
+              qty={product.qty}
+            />
+          );
+        })}
+      </div>
     </main>
   );
 }

@@ -1,16 +1,13 @@
 "use client";
-import Image from "next/image";
-import { BsSearch } from "react-icons/bs";
+import { BsSearch, BsBag } from "react-icons/bs";
 import Link from "next/link";
-import HamburgerMenu from "./hamburgerMenu";
-import BagMenu from "./bagMenu";
-import { Tajawal } from "next/font/google";
-import Logo from "@/public/images/avant-text.png";
-import Logo_White from "@/public/images/avant-text-white.png";
-import { useEffect } from "react";
+import { Source_Serif_4 } from "next/font/google";
+import { useEffect, useState } from "react";
 import { Prata } from "next/font/google";
+import StackMenu from "./stackMenu";
+import { AiOutlineMenu } from "react-icons/ai";
 
-const ysabeau_infant = Tajawal({
+const tajawal = Source_Serif_4({
   weight: ["300"],
   subsets: ["latin"],
 });
@@ -20,26 +17,17 @@ const prata = Prata({
   subsets: ["latin"],
 });
 
-/*
- <Image
-            className="lg:w-32 w-24 hidden lg:block"
-            src={Logo_White}
-            alt="waveco logo"
-            sizes="100%"
-          />
-*/
-
 function Navbar({ isHome }: any) {
   useEffect(() => {
-    const nav_bar = document.querySelector(".avant-navbar");
+    const nav_bar = document.querySelector("#avant-navbar");
     let scrollPos = window.scrollY;
 
     window.addEventListener("scroll", () => {
       if (isHome) {
         if (scrollPos < window.scrollY && scrollPos > 0) {
-          nav_bar?.classList.add("collapse");
+          nav_bar?.classList.add("opacity-0");
         } else {
-          nav_bar?.classList.remove("collapse");
+          nav_bar?.classList.remove("opacity-0");
         }
         if (scrollPos > window.scrollY && scrollPos > 200) {
           nav_bar?.classList.add("bg-white");
@@ -62,50 +50,47 @@ function Navbar({ isHome }: any) {
     });
   }, []);
 
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  useEffect(() => {
+    const body = document.body;
+    if (menuIsOpen) {
+      body.classList.add("overflow-y-hidden");
+    } else {
+      body.classList.remove("overflow-y-hidden");
+    }
+  }, [menuIsOpen]);
+
   return (
-    <div className="w-screen flex justify-center transition-all duration-300 ease-in-out">
-      <nav className="avant-navbar w-screen lg:h-20 flex items-center text-white lg:hover:text-black lg:hover:bg-white fixed z-50 lg:py-6 py-4 transition-all duration-300 ease-in-out bg-transparent">
-        <div className="flex w-1/2 lg:w-1/3 justify-start items-center lg:ml-10 ml-3">
+    <div>
+      <nav
+        id="avant-navbar"
+        className="w-screen flex items-center text-white lg:hover:text-black lg:hover:bg-white fixed z-50 lg:py-6 py-4 transition-all duration-300 ease-in-out bg-transparent"
+      >
+        <StackMenu isOpen={menuIsOpen} closeMenu={setMenuIsOpen}></StackMenu>
+        <div className="w-1/3 justify-start z-50 flex items-center gap-3 lg:gap-5 lg:ml-10 ml-3">
+          <div
+            className="flex items-center gap-2"
+            onClick={() => setMenuIsOpen(!menuIsOpen)}
+          >
+            <AiOutlineMenu size={28} />
+            <h3 className={`${tajawal.className} hidden lg:block`}>Menu</h3>
+          </div>
+        </div>
+        <div className="flex w-1/3  justify-center items-center">
           <Link href="/">
             <h1 className={`${prata.className} text-3xl`}>AVANT</h1>
           </Link>
         </div>
-        <ul className="lg:w-1/3 lg:flex hidden justify-between items-center">
-          <Link
-            href="/products/tees"
-            className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
-          >
-            Featured
-          </Link>
-          <Link
-            href="/products/mens"
-            className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
-          >
-            Mens
-          </Link>
-          <Link
-            href="/products/tees"
-            className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
-          >
-            Womens
-          </Link>
-          <Link
-            href="/products/tees"
-            className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
-          >
-            Gifts
-          </Link>
-          <Link
-            href="/products/tees"
-            className={`${ysabeau_infant.className} hover:border-b-2 border-black transition-all ease-linear duration-75 text-xl`}
-          >
-            Accesories
-          </Link>
-        </ul>
-        <div className="lg:w-1/3 w-1/2 justify-end z-50 flex items-center gap-3 lg:gap-5 lg:mr-10 mr-3">
-          <BsSearch size={25} />
-          <HamburgerMenu />
-          <BagMenu />
+        <div className="w-1/3 justify-end z-50 flex items-center gap-4 lg:gap-6 lg:mr-10 mr-3">
+          <div className="flex items-center gap-2">
+            <BsSearch size={23} />
+            <h3 className={`${tajawal.className} hidden lg:block`}>Search</h3>
+          </div>
+          <div className="flex items-center gap-2">
+            <BsBag size={23} />
+            <h3 className={`${tajawal.className} hidden lg:block`}>Bag</h3>
+          </div>
         </div>
       </nav>
     </div>

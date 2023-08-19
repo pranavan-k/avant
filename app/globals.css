@@ -6,3 +6,19 @@ body {
   margin: 0%;
   overflow-x: hidden;
 }
+
+.footer-header {
+  @apply lg:text-lg mb-3;
+}
+
+.menu-closed {
+  @apply left-[-200%];
+}
+
+.menu-open {
+  @apply left-0;
+}
+
+.nav-item {
+  @apply text-base hover:border-b-2 border-black p-2 transition-all duration-150 ease-linear;
+}

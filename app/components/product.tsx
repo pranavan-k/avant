@@ -1,5 +1,5 @@
-import React from 'react'
-import { CldImage } from 'next-cloudinary';
+import React from "react";
+import { CldImage } from "next-cloudinary";
 import { Tajawal } from "next/font/google";
 import { Source_Serif_4 } from "next/font/google";
 
@@ -13,25 +13,26 @@ const ysabeau_infant = Tajawal({
   subsets: ["latin"],
 });
 
-function Product({id, name, price, imageId, qty, children} : any) {
+function Product({ id, name, price, imageId, qty, children }: any) {
   return (
-    <div>
-        <div className='flex justify-center p-2'>
-            <CldImage
-            width="550"
-            alt="product image"
-            height="550"
-            src={imageId} 
-            placeholder="blur"
-            blurDataURL={imageId}
-            className='w-full h-auto'/>
-        </div>
-        <div className='ml-5 flex flex-col gap-1'>
-            <h1 className={`${source_serif.className}`}>{name}</h1>
-            <h3 className={`${ysabeau_infant.className} text-lg`}>{price}</h3>
-        </div>
+    <div className="col-span-1">
+      <div className="flex justify-center p-2">
+        <CldImage
+          alt="product image"
+          width="1100"
+          height="1400"
+          src={imageId}
+          placeholder="blur"
+          blurDataURL={imageId}
+          className="w-full h-auto"
+        />
+      </div>
+      <div className="ml-5 flex flex-col gap-1">
+        <h1 className={`${source_serif.className}`}>{name}</h1>
+        <h3 className={`${ysabeau_infant.className} text-lg`}>{price}</h3>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Product
+export default Product;

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import home_splash from "@/public/images/avant-home-splash2.png";
-import home_splash_mobile from "@/public/images/home-page-mobile.png";
+import HomeSplash from "@/public/images/home-page-img.png";
+import HomeSplashMobile from "@/public/images/home-page-alt.png";
 import { Prata } from "next/font/google";
 import { Tajawal } from "next/font/google";
 import AvantColgne from "@/public/images/avant-cologne.png";
@@ -32,18 +32,18 @@ export default function Home() {
           <div className="w-screen justify-center flex items-center">
             <Image
               className="w-full hidden lg:block brightness-90"
-              src={home_splash}
+              src={HomeSplash}
               alt="WaveCO homepage image"
               sizes="100vw"
             />
             <Image
               className="w-full lg:hidden block"
-              src={home_splash_mobile}
+              src={HomeSplashMobile}
               alt="WaveCO homepage image"
               sizes="100vw"
             />
           </div>
-          <div className="lg:absolute w-screen h-screen flex lg:p-16 p-5 lg:items-center lg:gap-8 items-center lg:text-left text-center flex-col justify-end">
+          <div className="lg:absolute w-screen lg:h-screen flex lg:p-16 p-5 lg:items-center lg:gap-8 items-center lg:text-left text-center flex-col justify-end">
             <h1
               className={`${source_serif.className} lg:text-6xl text-5xl lg:m-0 my-3 lg:text-white`}
             >
