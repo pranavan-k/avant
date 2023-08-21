@@ -39,7 +39,10 @@ function ProductPage({ params }: { params: { id: string } }) {
       <Navbar></Navbar>
       {data.map((product: any) => {
         return (
-          <span className="w-screen flex lg:flex-row flex-col justify-center lg:pt-24 pt-14">
+          <span
+            key={product._id}
+            className="w-screen flex lg:flex-row flex-col justify-center lg:pt-24 pt-14"
+          >
             <div className="grid lg:w-1/2 lg:overflow-y-auto overflow-x-auto lg:h-screen grid-flow-col auto-cols-[100%] lg:grid-flow-row">
               <CldImage
                 src={product.imageId}
