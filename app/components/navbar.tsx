@@ -48,7 +48,7 @@ function Navbar({ isHome }: any) {
         nav_bar?.classList.remove("text-white");
       }
     });
-  }, []);
+  }, [isHome]);
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 

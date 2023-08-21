@@ -19,7 +19,9 @@ function ProductPage({ params }: { params: { id: string } }) {
   const [data, setProductData] = useState([]);
 
   const fetchedProduct = async () => {
-    const productData = fetch(`/api/products/mens/${params.id}`)
+    const productData = fetch(`/api/products/mens/${params.id}`, {
+      method: "GET",
+    })
       .then((response) => {
         return response.json();
       })
