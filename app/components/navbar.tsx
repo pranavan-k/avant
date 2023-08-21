@@ -5,7 +5,7 @@ import { Source_Serif_4 } from "next/font/google";
 import { useEffect, useState } from "react";
 import { Prata } from "next/font/google";
 import StackMenu from "./stackMenu";
-import { AiOutlineMenu } from "react-icons/ai";
+import { LuMenu } from "react-icons/lu";
 
 const tajawal = Source_Serif_4({
   weight: ["300"],
@@ -65,7 +65,7 @@ function Navbar({ isHome }: any) {
     <div>
       <nav
         id="avant-navbar"
-        className="w-screen flex items-center text-white lg:hover:text-black lg:hover:bg-white fixed z-50 lg:py-6 py-4 transition-all duration-300 ease-in-out bg-transparent"
+        className="w-screen flex items-center text-white lg:hover:text-black lg:hover:bg-white fixed z-50 lg:py-5 py-4 transition-all duration-300 ease-in-out bg-transparent"
       >
         <StackMenu isOpen={menuIsOpen} closeMenu={setMenuIsOpen}></StackMenu>
         <div className="w-1/3 justify-start z-50 flex items-center gap-3 lg:gap-5 lg:ml-10 ml-3">
@@ -73,7 +73,7 @@ function Navbar({ isHome }: any) {
             className="flex items-center gap-2"
             onClick={() => setMenuIsOpen(!menuIsOpen)}
           >
-            <AiOutlineMenu size={28} />
+            <LuMenu size={28} />
             <h3 className={`${tajawal.className} hidden lg:block`}>Menu</h3>
           </div>
         </div>

@@ -22,7 +22,7 @@ function StackMenu({ isOpen, closeMenu }: menuProps) {
       }`}
     >
       <div
-        className={`lg:w-2/5 w-screen h-screen bg-white absolute transition-all duration-300 z-[500] ease-in-out ${
+        className={`lg:w-2/5 w-screen h-screen bg-white absolute text-black transition-all duration-300 z-[500] ease-in-out ${
           isOpen ? "menu-open" : "menu-closed"
         }`}
       >
