@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Prata } from "next/font/google";
 import StackMenu from "./stackMenu";
 import { LuMenu } from "react-icons/lu";
+import BagMenu from "./bagMenu";
 
 const tajawal = Source_Serif_4({
   weight: ["300"],
@@ -51,6 +52,7 @@ function Navbar({ isHome }: any) {
   }, [isHome]);
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [cartIsOpen, setCartIsOpen] = useState(false);
 
   useEffect(() => {
     const body = document.body;
@@ -68,6 +70,7 @@ function Navbar({ isHome }: any) {
         className="w-screen flex items-center text-white lg:hover:text-black lg:hover:bg-white fixed z-50 lg:py-5 py-4 transition-all duration-300 ease-in-out bg-transparent"
       >
         <StackMenu isOpen={menuIsOpen} closeMenu={setMenuIsOpen}></StackMenu>
+        <BagMenu isOpen={cartIsOpen} closeCart={setCartIsOpen}></BagMenu>
         <div className="w-1/3 justify-start z-50 flex items-center gap-3 lg:gap-5 lg:ml-10 ml-3">
           <div
             className="flex items-center gap-2"
@@ -87,7 +90,10 @@ function Navbar({ isHome }: any) {
             <BsSearch size={23} />
             <h3 className={`${tajawal.className} hidden lg:block`}>Search</h3>
           </div>
-          <div className="flex items-center gap-2">
+          <div
+            onClick={() => setCartIsOpen(!cartIsOpen)}
+            className="flex items-center gap-2"
+          >
             <BsBag size={23} />
             <h3 className={`${tajawal.className} hidden lg:block`}>Bag</h3>
           </div>
